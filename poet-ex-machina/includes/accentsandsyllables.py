@@ -16,12 +16,14 @@ class AccentsAndSyllables:
 
     ACCENTS_DICT_INFO_DIVIDER = ' '
     ACCENTS_DICT_MULTIPLE_ACCENTS_DIVIDER = ","	
-    ACCENTS_DICT_FILENAME = "dictonaries/zalizniak.txt"
+    ACCENTS_DICT_FILENAME = "/data/projects/punim0322/FIT5217/stuff/research/neuromiron/poet-ex-machina/dictonaries/zalizniak.txt"
 	
     syllablesAccentsBase = {}
     accentsDict = None
     wordFormsDictObj = None	
-	
+   
+    def getAccentsAndSyllablesWord(self,word):
+        return self.setAccentsAndSyllablesDict_N({1:{"word":word,"manualAccent":False}})[1]['sylNum'], self.setAccentsAndSyllablesDict_N({1:{"word":word,"manualAccent":False}})[1]['accentSylNum']
 
     def setAccentsAndSyllablesDict_N(self, words):
         """ Automatically sets Accents And Syllables in words base with dictionary"""

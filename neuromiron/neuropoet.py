@@ -22,7 +22,7 @@ HAWKING_CONTENT_FILENAME = "./hawking.txt"
 UK_CONTENT_FILENAME = "./uk.txt"
 WORD_RE = re.compile(r'[а-яА-ЯёЁa-zA-Z]+')
 
-sys.path.append("/data/projects/punim0322/FIT5217/stuff/research/neuromiron/poet-ex-machina/")
+sys.path.append("/path/to/poet-ex-machina/")
 
 
 import includes.accentsandsyllables as accentsandsyllables
@@ -198,12 +198,6 @@ def is_rhyme(word, rhymed_word):
         j = j - 1
 
     return True
-
-print(is_rhyme("блянина", "ссанина"))
-print(is_rhyme("лиан", "виан"))
-print(is_rhyme("говняшка", "неваляшка"))
-print(is_rhyme("пидор", "залупа"))
-
 
 
 
